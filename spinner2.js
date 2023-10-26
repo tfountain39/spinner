@@ -1,5 +1,17 @@
 // Sources: GPT3, MDN
 
-const progressIcon = [`\r| `, `\r/  `, `\r- `, `\r\\  `, `\r|  `, `\r/  `, `\r|  `, `\r/  `, `\r/  `, `\r-  `, `\r-  `, `\r\\  `]
+const progressIcons = [
+  `\r| `,
+  `\r/  `,
+  `\r- `,
+  `\r\\  `,
+  `\r|  `,
+  `\r/  `,
+  `\r-  `,
+  `\r\\  `]
 // For each character in the progressIcon array, write to stdoubt at a scheduled interval
-chars.forEach((progressIcon, i) => setTimeout(() => process.stdout.write(progressIcon), i * 200));
+progressIcons.forEach((icon, i) => 
+setTimeout(() => 
+process.stdout.write(icon), i * 500));
+
+setTimeout(() => process.stdout.write('\n'), progressIcons.length * 500);
